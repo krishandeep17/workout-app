@@ -1,0 +1,8 @@
+:root {
+  --swiper-theme-color: #e91e63;
+  --swiper-navigation-size: 2.5rem;
+}
+
+.swiper {
+  padding: 1.25rem 0 4.375rem;
+}

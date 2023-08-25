@@ -1,0 +1,15 @@
+.homepage {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(233, 30, 98, 0.2),
+    rgba(233, 30, 98, 0)
+  );
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  display: inline-block;
+  outline: none;
+}
