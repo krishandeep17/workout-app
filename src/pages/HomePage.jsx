@@ -22,7 +22,6 @@ export default function Home() {
 
   useEffect(() => {
     if (data) {
-      // Assuming that the 'data' response has an 'exercises' property
       setExercises(data);
     }
   }, [data]);

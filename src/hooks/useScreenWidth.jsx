@@ -1,20 +1,11 @@
-import { useEffect, useState } from "react";
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 export default function useScreenWidth() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [numCards, setNumCards] = useState(3);
+  const theme = useTheme();
 
-  useEffect(() => {
-    const callback = () => setScreenWidth(window.innerWidth);
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
-    window.addEventListener("resize", callback);
-
-    return () => window.removeEventListener("resize", callback);
-  }, []);
-
-  useEffect(() => {
-    setNumCards(() => (screenWidth >= 900 ? 3 : screenWidth >= 600 ? 2 : 1));
-  }, [screenWidth]);
-
-  return { numCards };
+  return [isMobile, isTablet];
 }

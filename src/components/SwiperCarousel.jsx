@@ -18,7 +18,9 @@ import "swiper/css/pagination";
 import "./swiperCarousel.css";
 
 export default function SwiperCarousel({ data }) {
-  const { numCards } = useScreenWidth();
+  const [isMobile, isTablet] = useScreenWidth();
+
+  const numCards = isMobile ? 1 : isTablet ? 2 : 3;
 
   return (
     <Swiper

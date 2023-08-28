@@ -6,6 +6,15 @@
   );
 }
 
+.search-box input {
+  padding-right: 120px;
+  padding-left: 40px;
+}
+
+.search-box fieldset {
+  border-width: 2px;
+}
+
 .link {
   text-decoration: none;
   color: inherit;

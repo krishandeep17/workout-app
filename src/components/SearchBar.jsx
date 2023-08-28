@@ -13,10 +13,12 @@ export default function SearchBar({ data, setExercises }) {
 
     const searchedExercises = data.filter(
       (exercise) =>
-        exercise.name.toLowerCase().includes(search) ||
-        exercise.target.toLowerCase().includes(search) ||
-        exercise.equipment.toLowerCase().includes(search) ||
-        exercise.bodyPart.toLowerCase().includes(search)
+        exercise.name.toLowerCase().includes(search.toLowerCase().trim()) ||
+        exercise.target.toLowerCase().includes(search.toLowerCase().trim()) ||
+        exercise.equipment
+          .toLowerCase()
+          .includes(search.toLowerCase().trim()) ||
+        exercise.bodyPart.toLowerCase().includes(search.toLowerCase().trim())
     );
 
     setExercises(searchedExercises);
@@ -55,15 +57,7 @@ export default function SearchBar({ data, setExercises }) {
           fullWidth
           id="search"
           placeholder="Search Exercises"
-          sx={{
-            "& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
-              pr: 15,
-              pl: 5.5,
-            },
-            "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-              borderWidth: 2,
-            },
-          }}
+          className="search-box"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
