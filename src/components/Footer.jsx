@@ -16,7 +16,7 @@ export default function Footer() {
         <FavoriteIcon fontSize="small" sx={{ color: "primary.main" }} />
         <Box component="span">by</Box>
         <Link
-          href="https://github.com/krishandeep17"
+          href="https://linktr.ee/krishandeep"
           target="_blank"
           rel="noopener noreferrer"
           underline="hover"
