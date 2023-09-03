@@ -18,7 +18,7 @@ export default function ExerciseVideos({ name }) {
           textTransform="capitalize"
           sx={{ color: "primary.main" }}
         >
-          ancher push up
+          {name}
         </Box>{" "}
         exercise videos
       </Heading>
